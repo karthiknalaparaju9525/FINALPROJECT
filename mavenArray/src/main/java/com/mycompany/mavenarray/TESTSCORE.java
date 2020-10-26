@@ -14,19 +14,19 @@ public class TESTSCORE {
 
 
 
-   private double[] scores;
-   double sum = 0;
+   private float[] scores;
+   float sum = 0;
 
-   public TESTSCORE(double array[]) {
+   public TESTSCORE(float array[]) {
       
        for (int i = 0; i < array.length; i++) {
-           scores = new double[array.length];
+           scores = new float[array.length];
         
            if (array[i] < 0 || array[i] > 100) {
         
                throw new IllegalArgumentException(
                       
-                       "Bad scores" + "\n\tInvalid score found." + "\n\tElement: " + i + " Score: " + array[i]);
+                       "NOT A EXACT SCORE" + "\n\tInvalid score found." + "\n\tELEMENTS: " + i + "\n\t SCORE GAINED: " + array[i]);
            } else {
                
                scores[i] = array[i];
@@ -35,7 +35,7 @@ public class TESTSCORE {
        }
    }
 
-   public double getAverage() {
+   public float getAve() {
        return sum / scores.length;
    }
 }

@@ -15,22 +15,22 @@ public class TestScoreNew {
 
    public static void main(String[] args) throws Exception {
        
-       double[] badScores = { 97.5, 66.7, 88.0, 101.0, 99.0 };
-       double[] goodScores = { 97.5, 66.7, 88.0, 100.0, 99.0 };
-       TESTSCORE test_Score = null;
-       // Start the try block.
+       float[] invalid = { 27.3F, 44.2F, 56.0F, 120.0F, 89.0F };
+       float[] valid = { 77.5F, 13.7F, 93.0F, 180.0F, 66.0F };
+       TESTSCORE TEST1 = null;
+       
        try {
-           test_Score = new TESTSCORE(badScores);
+           TEST1 = new TESTSCORE(invalid);
        } catch (IllegalArgumentException e) {
            System.out.println(e.getMessage());
        }
-       // Start the try block.
+       
        try {
-           test_Score = new TESTSCORE(goodScores);
+           TEST1 = new TESTSCORE(valid);
        } catch (IllegalArgumentException e) {
            System.out.println(e.getMessage());
        }
       
-       System.out.print("Good scores" + "\n\tThe average of the good scores is " + test_Score.getAverage());
+       System.out.print("BEST SCORE:" + "\n\t AVERGE OF THE SCORES: " + TEST1.getAve());
    }  
 }
